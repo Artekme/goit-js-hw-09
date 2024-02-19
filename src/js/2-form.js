@@ -22,7 +22,7 @@ form.addEventListener('submit', event => {
     alert('Please fill in both fields');
     return;
   }
-  console.log(savedInputData);
+  console.log(JSON.parse(localStorage.getItem(localStorageKey)));
   form.reset();
   localStorage.removeItem(localStorageKey);
 });
