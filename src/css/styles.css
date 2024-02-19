@@ -1,25 +1,91 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
-
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  padding: 20px;
+}
+.gallery {
+  list-style-type: none;
+  width: 1128px;
+  height: 648px;
+  display: grid;
+  padding: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+.gallery-image,
+.gallery-item,
+.gallery-link {
+  width: 360px;
+  height: 200px;
+}
+.gallery-image {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+.gallery-image:hover {
+  transform: scale(1.04);
+  cursor: zoom-in;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.feedback-form {
+  padding: 24px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.04em;
+}
+
+input,
+textarea {
+  width: 360px;
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  /* text-indent: 10px; */
+  padding: 10px;
+}
+textarea {
+  height: 80px;
+}
+input:hover,
+textarea:hover {
+  border: 2px solid #000000;
+}
+input:focus-visible,
+textarea:active {
+  border-color: #808080;
+  border-width: 1px;
+  border-style: inset;
+}
+
+button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  margin-top: 8px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6c8cff;
 }
